@@ -1,0 +1,31 @@
+This was designed as a little proof-of-concept project. The NUC runs an NVR which stores locally on the 1TB M.2 2280 M.2 SSD. The Raspberry Pi is a model 3B+ and is Ubuntu Server 64-bit 18.04LTS. Installed within Ubuntu on the Pi is:
+
+SNAP installed RocketChat-Server 3.0.1
+MySQL
+PCHWRM_Server
+
+The NUC has Windows 10 Enterprise LTSC and acts as the SSL reverse-proxy server for RocketChat. The SSL cert is issued by LetsEncrypt and is auto-renewing. It also runs PCHWRM_Client.
+
+Cronjobs and startup scripts on the 2 mini-boards are timed so that either via a reboot, power loss, or whatever....all dependancies start with enough time to automatically connect to each other without any intervention needed. Other than the monitor used for viewing hardware stats...this is a completely headless system.
+
+All the pieces of the case were designed specifically for this project and are available on Thingiverse (https://www.thingiverse.com/thing:4367016)
+
+Parts are as listed:
+
+1x NUC5I7RYH disassembled
+1x Raspberry Pi 3B+ (overclocked)
+1x 19vDC@4A NUC power brick
+1x 9-36vDC to 5vDC@5A Buck Converter (Pi and Monitor powered from this)
+1x WaveShare 5inch HDMI LCD
+1x Noctua NF-A12x15 FLX 120mm fan
+
+1x 16mm push-button LED power switch (12-24vDC rated)
+1x 90 degree down-angled USB to MicroUSB cable
+1x 2.1mm*5.5mm threaded female DC Power Jack Socket
+1x IDE extension cable (to run from RPi GPIO to LCD)
+1x 6" HDMI mini-cable
+1x 6" CAT6 mini-cable
+1x 2.1*5.5mm Y splitter
+1x 2.1*5.5mm to 2.5*5.5mm adapter
+16x 10-32 hex-head bolts (sides)
+8x 12-24 hex-head bolts (top and bottom)
